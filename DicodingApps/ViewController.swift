@@ -23,6 +23,12 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func goToWebsite(_ sender: Any) {
+        let urlMhmmdvg = "https://mhmmdvg.vercel.app/"
+        if let url = URL(string: urlMhmmdvg), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource {
